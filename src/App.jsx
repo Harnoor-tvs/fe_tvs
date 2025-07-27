@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Home from "./pages/home";
 import Results from "./components/results";
 import SearchBar from "./components/searchbar";
@@ -8,7 +8,7 @@ import SearchBar from "./components/searchbar";
 function App() {
   useEffect(() => {
     
-   fetch("http://localhost:8000/get-token")
+   fetch("http://localhost:8080/get-token")
       .then((res) => res.json())
       .then((data) => {
         sessionStorage.setItem("token", data.token);
@@ -57,7 +57,7 @@ function App() {
             }}
           >
             <img
-              src="/TVSLogo.svg"
+              src="./TVSLogo.svg"
               alt="TVS Logo"
               style={{ height: "32px", marginRight: "12px" }}
             />

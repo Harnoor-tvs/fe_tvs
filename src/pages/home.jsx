@@ -10,7 +10,7 @@ function Home() {
       }}
     >
       <img
-        src="/tvs-banner.webp"
+        src="./tvs-banner.webp"
         alt="TVS Banner"
         style={{
           width: "100%",

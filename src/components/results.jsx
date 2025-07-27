@@ -45,14 +45,14 @@ const getImageForResult = (item) => {
   const category = item.category?.toLowerCase() || "";
   const engine = item.engine_type?.toLowerCase() || "";
  
-  if (engine === "ev" && category.includes("scooter")) return "/images/evscooter.webp";
+  if (engine === "ev" && category.includes("scooter")) return "./images/evscooter.webp";
   if (engine === "ev" && (category.includes("three wheeler") || category.includes("auto")))
-    return "/images/evauto.webp";
-  if (category.includes("scooter") || category.includes("bebek")) return "/images/scooter.webp";
-  if (category.includes("motorcycle")) return "/images/bike.webp";
-  if (category.includes("auto") || category.includes("three wheeler")) return "/images/auto.webp";
-  if (category.includes("moped")) return "/images/xl.webp";
-  return "/images/auto.webp";
+    return "./images/evauto.webp";
+  if (category.includes("scooter") || category.includes("bebek")) return "./images/scooter.webp";
+  if (category.includes("motorcycle")) return "./images/bike.webp";
+  if (category.includes("auto") || category.includes("three wheeler")) return "./images/auto.webp";
+  if (category.includes("moped")) return "./images/xl.webp";
+  return "./images/auto.webp";
 };
  
 function Results() {
@@ -118,7 +118,7 @@ function Results() {
 
   const imageSrc = isVehicle
     ? getImageForResult(item)
-    : item.image_urls?.[0] || "/images/default-accessory.webp";
+    : item.image_urls?.[0] || "./images/default-accessory.webp";
 
   return (
     <a
