@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Results from "./components/results";
 import SearchBar from "./components/searchbar";
@@ -19,7 +19,7 @@ function App() {
       });
   }, []);
   return (
-    <Router>
+    <Router basename="/fe_tvs">
       <div
         style={{
           display: "flex",
